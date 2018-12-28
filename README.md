@@ -115,13 +115,11 @@ Block statements return the value of the last evaluated expression inside the
 curly braces. Remember, the variable declarations are _not_ expressions, so the
 value of `5 * 5 - 5` is returned.
 
-**Note**: The statement above _implicitly_ returns 20 (the value returned by
-`5 * 5 - 5`, when evaluated). Functions, which we will discuss in an upcoming
-lesson, also contain all of their code inside curly braces, but for functions,
+**Note**: The statement above _implicitly_ returns `20`, the value returned by
+`5 * 5 - 5`, when evaluated. The **implicit return is something unique to block statements**
+like the ones we use for `if...else` and loop statements. In the case of functions,
 we need to _explicitly_ use the word `return` to tell JavaScript what we want
-the output to be (if we want one, at all). Just remember that the _implicit
-return is something unique to block statements_ like the ones we use for
-`if...else` and loop statements.
+the output to be (if we want one, at all).
 
 ## Describe the Difference Between Truthy and Falsy Values
 
@@ -226,7 +224,7 @@ isAdult;
 // => undefined
 ```
 
-#### `else`
+### `else`
 
 If we want to run some code when the condition returns a `falsy` value, we can
 use an `else` clause:
@@ -247,15 +245,15 @@ isAdult;
 // => false
 ```
 
-#### Nested Conditionals
+### Nested Conditionals
 
 If we have multiple overlapping conditions, we can employ nested conditional
 statements. For example, instead of just deciding whether the passed-in `age`
-meets the criteria for `isAdult`, let's add in some other hallmarks of
-burgeoning adulthood (in American society, at least): `canWork`, `canEnlist`,
-and `canDrink`. 16-year-olds can legally work; 18-year-olds can work, enlist, and are
-legal adults; and 21-year-olds can work, enlist, are legal adults, and can
-drink (at the federally set minimum age, although there can be state-to-state
+meets the criteria for `isAdult`, let's add in some other examples of adulthood
+(in American society, at least): `canWork`, `canEnlist`, and `canDrink`.
+16-year-olds can legally work; 18-year-olds can work, enlist, and are legal
+adults; and 21-year-olds can work, enlist, are legal adults, and can drink
+(at the federally set minimum age, although there can be state-to-state
 exceptions for these laws). Let's use these conditions in a nesting example:
 
 ```js
@@ -289,7 +287,7 @@ canDrink;
 // => undefined
 ```
 
-#### `else if`
+### `else if`
 
 Another way to represent multiple possible conditions is with `else if` clauses:
 
@@ -452,7 +450,7 @@ The `default` and `break` keywords are both optional in basic `switch`
 statements, but useful. In more complicated statements, they become necessary
 to ensure the correct flow.
 
-#### `break`
+### `break`
 
 In the previous example, `break` is used to stop the `switch` statement from
 continuing to look at case statements. If instead, we wrote the following:
@@ -530,7 +528,7 @@ then proceeds to the next `case`, `age >= 18`, which returns `true`, assigning
 the value `true` to `isAdult` and `canEnlist`. Since it encounters no `break`
 statement, `canWork` is then set to true in the last case statement.
 
-#### `default`
+### `default`
 
 The `default` keyword specifies a set of statements to run after all of the
 `switch` statement's `case`s have been checked. The only time the `default`
@@ -648,104 +646,6 @@ to understand for an outsider. Remember, you generally write code once, but it
 gets read (by yourself and others) **far** more than once. The ternary is often
 more difficult to quickly interpret than a regular old `if...else`, so make
 sure the reduction in code is worth any potential reduction in readability.
-
-### Code Examples
-
-There are tons of control flow structures in the Flatbook project code base, a
-project that emulates the basic functionality of Facebook.
-
-#### `if...else`
-
-When a guest tries to log in, check whether the provided email and password
-match an active account:
-
-```js
-let errorMessage = '';
-let loggedIn = false;
-
-// *User enters a valid email and password and clicks the Login button*
-const email = 'avi@flatbook.com';
-const password = 'j4v45cr1pt 15 4w350m3';
-
-// *The Flatbook app then checks whether the provided email and password are valid*
-const accountFound = true;
-const passwordMatches = false;
-
-if (email === '') {
-	errorMessage = 'Please provide an email.';
-} else if (password === '') {
-	errorMessage = 'Please provide a password.';
-} else {
-	if (accountFound) {
-		if (passwordMatches) {
-			loggedIn = true;
-		} else {
-			errorMessage = "Sorry, that password doesn't match our records.";
-		}
-	} else {
-		errorMessage =
-			'Sorry, no account matching the provided email address was found.';
-	}
-}
-// => "Sorry, that password doesn't match our records."
-
-loggedIn;
-// => false
-
-errorMessage;
-// => "Sorry, that password doesn't match our records."
-```
-
-### Ternary Operator
-
-When a user logs in, check whether it's their birthday. If it is, set a
-celebratory message to appear in a banner; _else_, set the message to an empty
-string:
-
-```js
-const userBirthday = 'Dec 10';
-
-const userFullName = 'Ada Lovelace';
-
-let todaysDate = 'Dec 10';
-
-const birthdayMessage =
-	todaysDate === userBirthday ? `Happy birthday, ${userFullName}!` : '';
-
-birthdayMessage;
-// => "Happy birthday, Ada Lovelace!"
-```
-
-### `switch`
-
-Once the user logs in, set their permissions based on the account type:
-
-```js
-const accountType = 'admin';
-
-let permissionsLevel;
-let canViewProfiles = false;
-let canImpersonateUsers = false;
-
-switch (accountType) {
-	case 'guest':
-		permissionsLevel = 0;
-		break;
-	case 'user':
-		permissionsLevel = 10;
-		canViewProfiles = true;
-		break;
-	case 'admin':
-		permissionsLevel = 20;
-		canViewProfiles = true;
-		canImpersonateUsers = true;
-		break;
-}
-// => true
-
-permissionsLevel;
-// => 20
-```
 
 ## Conclusion
 
