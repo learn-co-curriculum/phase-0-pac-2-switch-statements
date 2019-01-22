@@ -96,17 +96,17 @@ functions.
 
 ```js
 {
-	('This line is a JavaScript statement nested inside a block statement!');
+  ('This line is a JavaScript statement nested inside a block statement!');
 
-	// This is also a statement nested inside a block:
-	5 * 5 - 5;
+  // This is also a statement nested inside a block:
+  5 * 5 - 5;
 
-	// And so are these:
-	const weCan = 'group multiple statements';
+  // And so are these:
+  const weCan = 'group multiple statements';
 
-	const suchAs = 'these variable declarations';
+  const suchAs = 'these variable declarations';
 
-	const insideA = 'block statement.';
+  const insideA = 'block statement.';
 }
 // => 20
 ```
@@ -189,7 +189,7 @@ straightforward:
 
 ```js
 if (condition) {
-	// Block of code
+  // Block of code
 }
 ```
 
@@ -201,7 +201,7 @@ const age = 30;
 let isAdult;
 
 if (age >= 18) {
-	isAdult = true;
+  isAdult = true;
 }
 // => true
 
@@ -217,7 +217,7 @@ const age = 14;
 let isAdult;
 
 if (age >= 18) {
-	isAdult = true;
+  isAdult = true;
 }
 
 isAdult;
@@ -235,9 +235,9 @@ const age = 14;
 let isAdult;
 
 if (age >= 18) {
-	isAdult = true;
+  isAdult = true;
 } else {
-	isAdult = false;
+  isAdult = false;
 }
 // => false
 
@@ -262,16 +262,16 @@ const age = 17;
 let isAdult, canWork, canEnlist, canDrink;
 
 if (age >= 16) {
-	canWork = true;
+  canWork = true;
 
-	if (age >= 18) {
-		isAdult = true;
-		canEnlist = true;
+  if (age >= 18) {
+    isAdult = true;
+    canEnlist = true;
 
-		if (age >= 21) {
-			canDrink = true;
-		}
-	}
+    if (age >= 21) {
+      canDrink = true;
+    }
+  }
 }
 
 isAdult;
@@ -297,16 +297,16 @@ const age = 20;
 let isAdult, canWork, canEnlist, canDrink;
 
 if (age >= 21) {
-	isAdult = true;
-	canWork = true;
-	canEnlist = true;
-	canDrink = true;
+  isAdult = true;
+  canWork = true;
+  canEnlist = true;
+  canDrink = true;
 } else if (age >= 18) {
-	isAdult = true;
-	canWork = true;
-	canEnlist = true;
+  isAdult = true;
+  canWork = true;
+  canEnlist = true;
 } else if (age >= 16) {
-	canWork = true;
+  canWork = true;
 }
 // => true
 
@@ -339,15 +339,15 @@ the `switch` statement. The general structure is as follows:
 
 ```js
 switch (expression) {
-	case value1:
-		// Statements
-		break;
-	case value2:
-		// Statements
-		break;
-	default:
-		// Statements
-		break;
+  case value1:
+    // Statements
+    break;
+  case value2:
+    // Statements
+    break;
+  default:
+    // Statements
+    break;
 }
 ```
 
@@ -360,15 +360,15 @@ const hunger = 'famished';
 let food;
 
 switch (hunger) {
-	case 'light':
-		food = 'grapes';
-		break;
-	case 'moderate':
-		food = 'sushi';
-		break;
-	case 'famished':
-		food = 'lasagna';
-		break;
+  case 'light':
+    food = 'grapes';
+    break;
+  case 'moderate':
+    food = 'sushi';
+    break;
+  case 'famished':
+    food = 'lasagna';
+    break;
 }
 // => "lasagna"
 
@@ -387,18 +387,18 @@ const order = 'cheeseburger';
 let ingredients;
 
 switch (order) {
-	case 'cheeseburger':
-		ingredients = 'bun, burger, cheese, lettuce, tomato, onion';
-		break;
-	case 'hamburger':
-		ingredients = 'bun, burger, lettuce, tomato, onion';
-		break;
-	case 'malted':
-		ingredients = 'milk, ice cream, malted milk powder';
-		break;
-	default:
-		console.log("Sorry, that's not on the menu right now.");
-		break;
+  case 'cheeseburger':
+    ingredients = 'bun, burger, cheese, lettuce, tomato, onion';
+    break;
+  case 'hamburger':
+    ingredients = 'bun, burger, lettuce, tomato, onion';
+    break;
+  case 'malted':
+    ingredients = 'milk, ice cream, malted milk powder';
+    break;
+  default:
+    console.log("Sorry, that's not on the menu right now.");
+    break;
 }
 ```
 
@@ -410,13 +410,13 @@ const order = 'cheeseburger';
 
 let ingredients;
 if (order === 'cheeseburger') {
-	ingredients = 'bun, burger, cheese, lettuce, tomato, onion';
+  ingredients = 'bun, burger, cheese, lettuce, tomato, onion';
 } else if (order === 'hamburger') {
-	ingredients = 'bun, burger, lettuce, tomato, onion';
+  ingredients = 'bun, burger, lettuce, tomato, onion';
 } else if (order === 'malted') {
-	ingredients = 'milk, ice cream, malted milk powder';
+  ingredients = 'milk, ice cream, malted milk powder';
 } else {
-	console.log("Sorry, that's not on the menu right now.");
+  console.log("Sorry, that's not on the menu right now.");
 }
 ```
 
@@ -432,17 +432,17 @@ const age = 15;
 let isTeenager;
 
 switch (age) {
-	case 13:
-	case 14:
-	case 15:
-	case 16:
-	case 17:
-	case 18:
-	case 19:
-		isTeenager = true;
-		break;
-	default:
-		isTeenager = false;
+  case 13:
+  case 14:
+  case 15:
+  case 16:
+  case 17:
+  case 18:
+  case 19:
+    isTeenager = true;
+    break;
+  default:
+    isTeenager = false;
 }
 ```
 
@@ -461,18 +461,18 @@ const age = 15;
 let isTeenager;
 
 switch (age) {
-	case 13:
-	case 14:
-	case 15:
-	case 16:
-	case 17:
-	case 18:
-	case 19:
-		isTeenager = true;
-		console.log('case 19: ', isTeenager);
-	default:
-		isTeenager = false;
-		console.log('default: ', isTeenager);
+  case 13:
+  case 14:
+  case 15:
+  case 16:
+  case 17:
+  case 18:
+  case 19:
+    isTeenager = true;
+    console.log('case 19: ', isTeenager);
+  default:
+    isTeenager = false;
+    console.log('default: ', isTeenager);
 }
 ```
 
@@ -494,13 +494,13 @@ const age = 20;
 let isAdult, canWork, canEnlist, canDrink;
 
 switch (true) {
-	case age >= 21:
-		canDrink = true;
-	case age >= 18:
-		isAdult = true;
-		canEnlist = true;
-	case age >= 16:
-		canWork = true;
+  case age >= 21:
+    canDrink = true;
+  case age >= 18:
+    isAdult = true;
+    canEnlist = true;
+  case age >= 16:
+    canWork = true;
 }
 // => true
 
@@ -541,12 +541,12 @@ const mood = 'quizzical';
 let response;
 
 switch (mood) {
-	case 'happy':
-		response = 'Heck yea; be happy!';
-	case 'sad':
-		response = "You're awesome; keep your head up!";
-	default:
-		response = "Sorry, I don't know how to respond to that mood.";
+  case 'happy':
+    response = 'Heck yea; be happy!';
+  case 'sad':
+    response = "You're awesome; keep your head up!";
+  default:
+    response = "Sorry, I don't know how to respond to that mood.";
 }
 // => "Sorry, I don't know how to respond to that mood."
 
@@ -563,12 +563,12 @@ const mood = 'happy';
 let response;
 
 switch (mood) {
-	case 'happy':
-		response = 'Heck yea; be happy!';
-	case 'sad':
-		response = "You're awesome; keep your head up!";
-	default:
-		response = "Sorry, I don't know how to respond to that mood.";
+  case 'happy':
+    response = 'Heck yea; be happy!';
+  case 'sad':
+    response = "You're awesome; keep your head up!";
+  default:
+    response = "Sorry, I don't know how to respond to that mood.";
 }
 // => "Sorry, I don't know how to respond to that mood."
 
@@ -595,7 +595,6 @@ condition returns a falsy value, run the code in `expression2`.
 
 ```js
 const age = 45;
-
 let isAdult;
 
 age >= 18 ? (isAdult = true) : (isAdult = false);
@@ -611,7 +610,6 @@ the result of the ternary directly to a variable:
 
 ```js
 const age = 60;
-
 const isAdult = age >= 18 ? true : false;
 
 isAdult;
@@ -623,11 +621,8 @@ expressions, or the entire ternary in parentheses:
 
 ```js
 const age = 17;
-
 const isAdult = age >= 18 ? true : false;
-
 const canWork = age >= 16 ? 1 === 1 : 1 !== 1;
-
 const canEnlist = isAdult ? true : false;
 
 isAdult;
