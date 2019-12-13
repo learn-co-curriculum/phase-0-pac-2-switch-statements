@@ -174,7 +174,7 @@ Boolean({ firstName: 'Brendan', lastName: 'Eich' });
 // => true
 ```
 
-**Note**: `document.all` is also falsy, but don't worry about too much 
+**Note**: `document.all` is also falsy, but don't worry about too much
 -- it's an imperfect solution for legacy code compatibility.
 
 ## Learn to Use Conditional Statements
@@ -621,9 +621,9 @@ expressions, or the entire ternary in parentheses:
 
 ```js
 const age = 17;
-const isAdult = age >= 18 ? true : false;
-const canWork = age >= 16 ? 1 === 1 : 1 !== 1;
-const canEnlist = isAdult ? true : false;
+const isAdult = (age >= 18) ? true : false;
+const canWork = age >= 16 ? (1 === 1) : (1 !== 1);
+const canEnlist = (isAdult ? true : false);
 
 isAdult;
 // => false
