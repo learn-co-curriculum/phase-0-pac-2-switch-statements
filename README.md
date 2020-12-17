@@ -7,7 +7,7 @@
 ## Introduction
 
 In this lesson we'll learn about the third tool available in JavaScript to use
-_selection_, the `switch` statement It provides an alternate way of expressing
+_selection_, the `switch` statement. It provides an alternate way of expressing
 conditional code that is less repetitive in cases where you want to test
 multiple conditions against a single value.
 
@@ -111,9 +111,9 @@ characterType;
 In the above example, if the `name` variable matches the names of any of the
 dwarves, the `characterType` variable will be set to "dwarf".
 
-The `default` and `break` keywords are both optional in `switch` statements, but
-can be useful. In more complicated statements, they become necessary to ensure
-the correct flow.
+The `default` and `break` keywords are both _optional_ in `switch` statements,
+but can be useful. In more complicated statements, they become necessary to
+ensure the correct flow.
 
 ### `default`
 
@@ -121,23 +121,23 @@ The `default` keyword is similar to the `else` clause in an `if...else`
 construction. It specifies a set of statements to run after all of the `switch`
 statement's `case`s have been checked. However, it is different from an `else`
 in that **the only time it does _not_ run is if the engine hits a `break` in one
-of the `case` statements**. If you use a `default` in your `switch` statement, it is generally safest to include `break`s as well.
+of the `case` statements**. If you only want one code block in your `switch`
+statement to execute, it is safest to always include the `break` keyword.
 
 ### `break`
 
 In the previous example, `break` is used to stop the `switch` statement from
 continuing to look at case statements once it finds a match. If we left out the
-`break` keyword, the switch statement would get to a match at `case "Grumpy"`
-and continue on through to the statements nested under `case "Doc"`, setting
-`characterType` to "dwarf". It would then continue executing the code, and, when
-it got to `default`, would reset `characterType` to "minor character." To keep
-that from happening, we use `break` to tell the JavaScript engine to stop
-executing the `switch` statement as soon as it finds a match. You will often see
-switch statements where `break` is used in every case as a way to ensure there
-is no unexpected behavior from multiple cases executing.
+`break` keyword, the "Grumpy" case would match and "dwarf" would be assigned to
+`characterType`. However, since we didn't break after that assignment, the code
+continues to execute and `characterType` winds up being reset to "minor
+character." To keep that from happening, we use `break` to tell the JavaScript
+engine to stop executing the `switch` statement as soon as it finds a match. You
+will often see switch statements where `break` is used in every case as a way to
+ensure there is no unexpected behavior from multiple cases executing.
 
 **Advanced:** Sometimes we _want_ to potentially match multiple cases, and we
-will need to leave out `break` in order to do this. Let's revisit this example
+will need to leave out `break` in order to do this. Let's revisit an example
 from the lesson on `if` statements:
 
 ```js
@@ -171,12 +171,13 @@ canDrink;
 // => undefined
 ```
 
-We can refactor the above `if...else` chain as a more compact, less repetitious
-`switch` statement. To make it work, we can will employ a neat little trick:
-using comparisons for `case` statements instead of a simple value.
+We can refactor the above `if...else if...else` chain as a more compact, less
+repetitious `switch` statement. To make it work, we can will employ a neat
+little trick: we'll use comparisons for our `case` statements instead of a
+simple value.
 
 ```js
-const age = 20;
+const age = 21;
 let isAdult, canWork, canEnlist, canDrink;
 
 switch (true) {
@@ -208,13 +209,14 @@ _comparison expressions_ that return `true` or `false`. If the comparison
 returns `true` its statements will be run. Because we did not include any
 `break` statements, once _one_ case statement matches, all subsequent statements
 will execute. This is what we want here: if `age` is greater than 21, it's also
-greater than 18 and 16, so we want *all* the assignments to run. 
+greater than 18 and 16, so we want *all* the assignments to run.
 
-With `age` set to `20` in the above example, the first `case`, `age >= 21`,
+If we set `age` to `20` in the above example, the first `case`, `age >= 21`,
 returns `false` and so the assignment of `canDrink` never happens. The engine
 then proceeds to the next `case`, `age >= 18`, which returns `true`, assigning
 the value `true` to `isAdult` and `canEnlist`. Since it encounters no `break`
-statement, `canWork` is then set to true in the last case statement.
+statement, it then proceeds to the last case statement where `canWork` is set to
+true as well.
 
 ## Conclusion
 
