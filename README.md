@@ -45,30 +45,7 @@ we always compare with `===`. This is a pretty common selection need. It's so
 standard that the `switch` statement was created to enable us to streamline our
 code. Here's the `switch` version of the code above:
 
-```js
-const name = "Alice";
-let greeting;
-
-switch (name) {
-  case "Alice":
-    greeting = "Hello, Alice!";
-    break;
-  case "The White Rabbit":
-    greeting = "Don't be late, White Rabbit";
-    break;
-  case "The Mad Hatter":
-    greeting = "Welcome to the tea party, Mad Hatter";
-    break;
-  case "The Queen of Hearts":
-    greeting = "Please don't chop off my head!";
-    break;
-  default:
-    greeting = "Whoooo are you?";
-}
-
-greeting;
-// => "Hello, Alice!"
-```
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/PreemptiveSlipperyPassword?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The JavaScript engine compares the value passed in to the `switch` statement
 (here, `name`) against each of the `case` values _using strict equality_
@@ -78,36 +55,7 @@ repeat the `if (name === _____)` line for each possibility.
 
 We can also assign the same set of statements to multiple cases:
 
-```js
-const name = "Grumpy";
-let characterType;
-
-switch (name) {
-  case "Sleepy":
-  case "Sneezy":
-  case "Happy":
-  case "Grumpy":
-  case "Bashful":
-  case "Dopey":
-  case "Doc":
-    characterType = "dwarf";
-    break;
-  case "Handsome Prince":
-    characterType = "hero";
-    break;
-  case "Evil Queen":
-    characterType = "villain";
-    break;
-  case "Snow White":
-    characterType = "heroine";
-    break;
-  default:
-    characterType = "minor character";
-}
-
-characterType;
-//=> "dwarf"
-```
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/AgedTubbyUserinterface?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the above example, if the `name` variable matches the names of any of the
 dwarves, the `characterType` variable will be set to "dwarf".
@@ -123,19 +71,20 @@ construction. It specifies a set of statements to run after all of the `switch`
 statement's `case`s have been checked. However, it is different from an `else`
 in that **the only time it does _not_ run is if the engine hits a `break` in one
 of the `case` statements**. If you only want one code block in your `switch`
-statement to execute, it is safest to always include the `break` keyword.
+statement to execute, you should always include the `break` keyword.
 
 ### `break`
 
 In the previous example, `break` is used to stop the `switch` statement from
 continuing to look at case statements once it finds a match. If we left out the
-`break` keyword, the "Grumpy" case would match and "dwarf" would be assigned to
+`break` keywords, the "Grumpy" case would match and "dwarf" would be assigned to
 `characterType`. However, since we didn't break after that assignment, the code
-continues to execute and `characterType` winds up being reset to "minor
-character." To keep that from happening, we use `break` to tell the JavaScript
-engine to stop executing the `switch` statement as soon as it finds a match. You
-will often see switch statements where `break` is used in every case as a way to
-ensure there is no unexpected behavior from multiple cases executing.
+would continue to execute and `characterType` would wind up being reset to
+"minor character." To keep that from happening, we use `break` to tell the
+JavaScript engine to stop executing the `switch` statement as soon as it finds a
+match. You will often see switch statements where `break` is used in every case
+as a way to ensure there is no unexpected behavior from multiple cases
+executing.
 
 **Advanced:** Sometimes we _want_ to potentially match multiple cases, and we
 will need to leave out `break` in order to do this. Let's revisit an example
@@ -206,11 +155,11 @@ canDrink;
 ```
 
 We specified `true` as the value to `switch` on. All of our `case`s are
-_comparison expressions_ that return `true` or `false`. If the comparison
-returns `true` its statements will be run. Because we did not include any
-`break` statements, once _one_ case statement matches, all subsequent statements
-will execute. This is what we want here: if `age` is greater than 21, it's also
-greater than 18 and 16, so we want *all* the assignments to be made.
+_comparison expressions_ that return `true` or `false`. Therefore, if a
+comparison returns `true`, its statements will be run. Because we did not include
+any `break` statements, once _one_ case statement matches, all subsequent
+statements will execute. This is what we want here: if `age` is greater than 21,
+it's also greater than 18 and 16, so we want *all* the assignments to be made.
 
 If we set `age` to `20` in the above example, the first `case`, `age >= 21`,
 returns `false` and the assignment of `canDrink` never happens. The engine then
@@ -229,8 +178,8 @@ or `if...else if...else`. It may not be the most efficient way to write the
 code, but you can't go wrong.
 
 As a rule of thumb, you may find it makes sense to start with `if` statements
-and, once you've got it working, consider refactoring to use a ternary or switch
-statement if they're better suited for what you need to do.
+and, once you've got it working, consider refactoring your code to use a ternary
+or switch statement if they're better suited for what you need to do.
 
 ## Resources
 
