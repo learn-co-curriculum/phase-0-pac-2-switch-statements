@@ -126,33 +126,7 @@ repetitious `switch` statement. To make it work, we will employ a neat little
 trick: we'll use comparisons for our `case` statements instead of a simple
 value.
 
-```js
-const age = 21;
-let isAdult, canWork, canEnlist, canDrink;
-
-switch (true) {
-  case age >= 21:
-    canDrink = true;
-  case age >= 18:
-    isAdult = true;
-    canEnlist = true;
-  case age >= 16:
-    canWork = true;
-}
-// => true
-
-isAdult;
-// => true
-
-canWork;
-// => true
-
-canEnlist;
-// => true
-
-canDrink;
-// => undefined
-```
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CleanMammothUsers?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 We specified `true` as the value to `switch` on. All of our `case`s are
 _comparison expressions_ that return `true` or `false`. Therefore, if a
