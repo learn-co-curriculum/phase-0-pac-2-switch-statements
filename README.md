@@ -6,10 +6,11 @@
 
 ## Introduction
 
-In this lesson we'll learn about the third tool available in JavaScript to use
-_selection_, the `switch` statement. It provides an alternate way of expressing
-conditional code that is less repetitive in cases where you want to test
-multiple conditions against a single value.
+We've now learned about two of the three _selection_ tools available to us in
+JavaScript: the `if` statement and the `ternary` expression. In this lesson,
+we'll learn about a third: the `switch` statement. The `switch` statement
+provides an alternate way of expressing conditional code that is less repetitive
+in cases where you want to test multiple conditions against a single value.
 
 ![Seelection Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Selection_thick.png)
 
@@ -39,10 +40,10 @@ greeting;
 //=> "Hello, Alice!"
 ```
 
-As we can see, there's quite a bit of repetition here: We always test name and
+As we can see, there's quite a bit of repetition here: we always test `name` and
 we always compare with `===`. This is a pretty common selection need. It's so
-standard, that the `switch` statement was created to cut down the typing, but do
-the same thing. Here's the `switch` version of the code above:
+standard that the `switch` statement was created to enable us to streamline our
+code. Here's the `switch` version of the code above:
 
 ```js
 const name = "Alice";
@@ -172,9 +173,9 @@ canDrink;
 ```
 
 We can refactor the above `if...else if...else` chain as a more compact, less
-repetitious `switch` statement. To make it work, we can will employ a neat
-little trick: we'll use comparisons for our `case` statements instead of a
-simple value.
+repetitious `switch` statement. To make it work, we will employ a neat little
+trick: we'll use comparisons for our `case` statements instead of a simple
+value.
 
 ```js
 const age = 21;
@@ -209,12 +210,12 @@ _comparison expressions_ that return `true` or `false`. If the comparison
 returns `true` its statements will be run. Because we did not include any
 `break` statements, once _one_ case statement matches, all subsequent statements
 will execute. This is what we want here: if `age` is greater than 21, it's also
-greater than 18 and 16, so we want *all* the assignments to run.
+greater than 18 and 16, so we want *all* the assignments to be made.
 
 If we set `age` to `20` in the above example, the first `case`, `age >= 21`,
-returns `false` and so the assignment of `canDrink` never happens. The engine
-then proceeds to the next `case`, `age >= 18`, which returns `true`, assigning
-the value `true` to `isAdult` and `canEnlist`. Since it encounters no `break`
+returns `false` and the assignment of `canDrink` never happens. The engine then
+proceeds to the next `case`, `age >= 18`, which returns `true`, assigning the
+value `true` to `isAdult` and `canEnlist`. Since it encounters no `break`
 statement, it then proceeds to the last case statement where `canWork` is set to
 true as well.
 
@@ -224,10 +225,11 @@ You now have three different tools available to you to use _selection_ in
 JavaScript: the `if` statement, the `ternary` expression, and the `switch`
 statement. The `if` statement is the one you will use most often &mdash; in
 fact, you can _always_ construct your conditional code using `if`, `if...else`,
-or `if...else if...else`. It may not be the most efficient way to write the code, but you can always get it to work.
+or `if...else if...else`. It may not be the most efficient way to write the
+code, but you can't go wrong.
 
 As a rule of thumb, you may find it makes sense to start with `if` statements
-and, once that's working, consider refactoring to use a ternary or switch
+and, once you've got it working, consider refactoring to use a ternary or switch
 statement if they're better suited for what you need to do.
 
 ## Resources
