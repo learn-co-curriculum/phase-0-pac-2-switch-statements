@@ -147,9 +147,9 @@ true as well.
 You now have three different tools available to you to use _selection_ in
 JavaScript: the `if` statement, the `ternary` expression, and the `switch`
 statement. The `if` statement is the one you will use most often &mdash; in
-fact, you can _always_ construct your conditional code using `if`, `if...else`,
-or `if...else if...else`. It may not be the most efficient way to write the
-code, but you can't go wrong.
+fact, you can _always_ construct your conditional code using some combination of
+`if`, `else if`, and `else`. It may not be the most efficient way to write the
+code, but it will always do the trick.
 
 As a rule of thumb, you may find it makes sense to start with `if` statements
 and, once you've got it working, consider refactoring your code to use a ternary
