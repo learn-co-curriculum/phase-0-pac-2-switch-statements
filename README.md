@@ -152,7 +152,7 @@ fact, you can _always_ construct your conditional code using some combination of
 code, but it will always do the trick.
 
 As a rule of thumb, you may find it makes sense to start with `if` statements
-and, once you've got it working, consider refactoring your code to use a ternary
+and, once you've got the code working, consider refactoring it to use a ternary
 or switch statement if they're better suited for what you need to do.
 
 ## Resources
