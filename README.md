@@ -12,7 +12,7 @@ we'll learn about a third: the `switch` statement. The `switch` statement
 provides an alternate way of expressing conditional code that is less repetitive
 in cases where you want to test multiple conditions against a single value.
 
-![Seelection Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Selection_thick.png)
+![Seelection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 ## Learn to Use the Switch Statement
 
