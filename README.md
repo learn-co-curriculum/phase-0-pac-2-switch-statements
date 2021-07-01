@@ -77,13 +77,13 @@ statement to execute, you should always include the `break` keyword.
 
 In the previous example, `break` is used to stop the `switch` statement from
 continuing to look at case statements once it finds a match. If we left out the
-`break` keywords, the "Grumpy" case would match and "dwarf" would be assigned to
-`characterType`. However, since we didn't break after that assignment, the code
-would continue to execute and `characterType` would wind up being reset to
+`break` keywords, the JavaScript engine would first assign `characterType` to
+"dwarf" when it reached the "Grumpy" case (as desired), but the code would
+**continue to execute** and `characterType` would wind up being reset to
 "minor character." To keep that from happening, we use `break` to tell the
-JavaScript engine to stop executing the `switch` statement as soon as it finds a
-match. You will often see switch statements where `break` is used in every case
-as a way to ensure there is no unexpected behavior from multiple cases
+JavaScript engine to stop executing the `switch` statement as soon as it finds
+a match. You will often see switch statements where `break` is used in every
+case as a way to ensure there is no unexpected behavior from multiple cases
 executing.
 
 **Advanced:** Sometimes we _want_ to potentially match multiple cases, and we
