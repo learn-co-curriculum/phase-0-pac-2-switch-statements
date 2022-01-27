@@ -1,4 +1,4 @@
-# Selection with Conditional: the 'switch' Statement
+# Selection with Conditionals: the 'switch' Statement
 
 ## Learning Goals
 
@@ -45,7 +45,29 @@ we always compare with `===`. This is a pretty common selection need. It's so
 standard that the `switch` statement was created to enable us to streamline our
 code. Here's the `switch` version of the code above:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/PreemptiveSlipperyPassword?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+const name = "Alice";
+let greeting;
+
+switch (name) {
+  case "Alice":
+    greeting = "Hello, Alice!";
+    break;
+  case "The White Rabbit":
+    greeting = "Don't be late, White Rabbit";
+    break;
+  case "The Mad Hatter":
+    greeting = "Welcome to the tea party, Mad Hatter";
+    break;
+  case "The Queen of Hearts":
+    greeting = "Please don't chop off my head!";
+    break;
+  default:
+    greeting = "Whoooo are you?";
+}
+
+greeting;
+```
 
 The JavaScript engine compares the value passed in to the `switch` statement
 (here, `name`) against each of the `case` values _using strict equality_
@@ -55,10 +77,42 @@ repeat the `if (name === _____)` line for each possibility.
 
 We can also assign the same set of statements to multiple cases:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/AgedTubbyUserinterface?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+const name = "Grumpy";
+let characterType;
+
+switch (name) {
+  case "Sleepy":
+  case "Sneezy":
+  case "Happy":
+  case "Grumpy":
+  case "Bashful":
+  case "Dopey":
+  case "Doc":
+    characterType = "dwarf";
+    break;
+  case "Handsome Prince":
+    characterType = "hero";
+    break;
+  case "Evil Queen":
+    characterType = "villain";
+    break;
+  case "Snow White":
+    characterType = "heroine";
+    break;
+  default:
+    characterType = "minor character";
+}
+
+characterType;
+```
 
 In the above example, if the `name` variable matches the names of any of the
 dwarves, the `characterType` variable will be set to "dwarf".
+
+Try out both of these examples in the repl:
+
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/PreemptiveSlipperyPassword?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The `default` and `break` keywords are both _optional_ in `switch` statements,
 but can be useful. In more complicated statements, they become necessary to
@@ -126,7 +180,24 @@ repetitious `switch` statement. To make it work, we will employ a neat little
 trick: we'll use comparisons for our `case` statements instead of a simple
 value.
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CleanMammothUsers?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+const age = 21;
+let isAdult, canWork, canEnlist, canDrink;
+
+switch (true) {
+  case age >= 21:
+    canDrink = true;
+  case age >= 18:
+    isAdult = true;
+    canEnlist = true;
+  case age >= 16:
+    canWork = true;
+}
+canWork;
+canEnlist;
+isAdult;
+canDrink;
+```
 
 We specified `true` as the value to `switch` on. All of our `case`s are
 _comparison expressions_ that return `true` or `false`. Therefore, if a
@@ -141,6 +212,10 @@ proceeds to the next `case`, `age >= 18`, which returns `true`, assigning the
 value `true` to `isAdult` and `canEnlist`. Since it encounters no `break`
 statement, it then proceeds to the last case statement where `canWork` is set to
 true as well.
+
+Use the repl to experiment with different values for `age`:
+
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CleanMammothUsers?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Conclusion
 
