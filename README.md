@@ -1,4 +1,4 @@
-# Selection with Conditional: the 'switch' Statement
+# Selection with Conditionals: the 'switch' Statement
 
 ## Learning Goals
 
