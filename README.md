@@ -12,7 +12,7 @@ we'll learn about a third: the `switch` statement. The `switch` statement
 provides an alternate way of expressing conditional code that is less repetitive
 in cases where you want to test multiple conditions against a single value.
 
-![Seelection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
+![Selection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 ## Learn to Use the Switch Statement
 
@@ -45,7 +45,7 @@ we always compare with `===`. This is a pretty common selection need. It's so
 standard that the `switch` statement was created to enable us to streamline our
 code. Here's the `switch` version of the code above:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/PreemptiveSlipperyPassword?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/VastVividPreprocessor?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The JavaScript engine compares the value passed in to the `switch` statement
 (here, `name`) against each of the `case` values _using strict equality_
@@ -55,7 +55,7 @@ repeat the `if (name === _____)` line for each possibility.
 
 We can also assign the same set of statements to multiple cases:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/AgedTubbyUserinterface?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/LatestAshamedStrategy?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the above example, if the `name` variable matches the names of any of the
 dwarves, the `characterType` variable will be set to "dwarf".
@@ -126,7 +126,7 @@ repetitious `switch` statement. To make it work, we will employ a neat little
 trick: we'll use comparisons for our `case` statements instead of a simple
 value.
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CleanMammothUsers?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/YummyThreadbareResource?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 We specified `true` as the value to `switch` on. All of our `case`s are
 _comparison expressions_ that return `true` or `false`. Therefore, if a
