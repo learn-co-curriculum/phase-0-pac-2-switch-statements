@@ -12,7 +12,7 @@ we'll learn about a third: the `switch` statement. The `switch` statement
 provides an alternate way of expressing conditional code that is less repetitive
 in cases where you want to test multiple conditions against a single value.
 
-![Selection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
+![Selection is a deviation from the default execution path of a program. By choosing a different path using a conditional (switch-case) statement.](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 ## Learn to Use the Switch Statement
 
