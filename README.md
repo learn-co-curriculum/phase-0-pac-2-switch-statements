@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-* Learn to use the `switch` statement
+- Learn to use the `switch` statement
 
 ## Introduction
 
@@ -25,15 +25,15 @@ const name = "Alice";
 let greeting;
 
 if (name === "Alice") {
-  greeting = "Hello, Alice!"
+  greeting = "Hello, Alice!";
 } else if (name === "The White Rabbit") {
-  greeting = "Don't be late, White Rabbit"
+  greeting = "Don't be late, White Rabbit";
 } else if (name === "The Mad Hatter") {
-  greeting = "Welcome to the tea party, Mad Hatter"
+  greeting = "Welcome to the tea party, Mad Hatter";
 } else if (name === "The Queen of Hearts") {
-  greeting = "Please don't chop off my head!"
+  greeting = "Please don't chop off my head!";
 } else {
-  greeting = "Whoooo are you?"
+  greeting = "Whoooo are you?";
 }
 
 greeting;
@@ -45,7 +45,7 @@ we always compare with `===`. This is a pretty common selection need. It's so
 standard that the `switch` statement was created to enable us to streamline our
 code. Here's the `switch` version of the code above:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/VastVividPreprocessor?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/VastVividPreprocessor?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The JavaScript engine compares the value passed in to the `switch` statement
 (here, `name`) against each of the `case` values _using strict equality_
@@ -55,7 +55,7 @@ repeat the `if (name === _____)` line for each possibility.
 
 We can also assign the same set of statements to multiple cases:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/LatestAshamedStrategy?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/LatestAshamedStrategy?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the above example, if the `name` variable matches the names of any of the
 dwarves, the `characterType` variable will be set to "dwarf".
@@ -79,12 +79,11 @@ In the previous example, `break` is used to stop the `switch` statement from
 continuing to look at case statements once it finds a match. If we left out the
 `break` keywords, the JavaScript engine would first assign `characterType` to
 "dwarf" when it reached the "Grumpy" case (as desired), but the code would
-**continue to execute** and `characterType` would wind up being reset to
-"minor character." To keep that from happening, we use `break` to tell the
-JavaScript engine to stop executing the `switch` statement as soon as it finds
-a match. You will often see switch statements where `break` is used in every
-case as a way to ensure there is no unexpected behavior from multiple cases
-executing.
+**continue to execute** and `characterType` would wind up being reset to "minor
+character." To keep that from happening, we use `break` to tell the JavaScript
+engine to stop executing the `switch` statement as soon as it finds a match. You
+will often see switch statements where `break` is used in every case as a way to
+ensure there is no unexpected behavior from multiple cases executing.
 
 **Advanced:** Sometimes we _want_ to potentially match multiple cases, and we
 will need to leave out `break` in order to do this. Let's revisit an example
@@ -126,14 +125,15 @@ repetitious `switch` statement. To make it work, we will employ a neat little
 trick: we'll use comparisons for our `case` statements instead of a simple
 value.
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/YummyThreadbareResource?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/YummyThreadbareResource?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 We specified `true` as the value to `switch` on. All of our `case`s are
 _comparison expressions_ that return `true` or `false`. Therefore, if a
-comparison returns `true`, its statements will be run. Because we did not include
-any `break` statements, once _one_ case statement matches, all subsequent
-statements will execute. This is what we want here: if `age` is greater than 21,
-it's also greater than 18 and 16, so we want *all* the assignments to be made.
+comparison returns `true`, its statements will be run. Because we did not
+include any `break` statements, once _one_ case statement matches, all
+subsequent statements will execute. This is what we want here: if `age` is
+greater than 21, it's also greater than 18 and 16, so we want _all_ the
+assignments to be made.
 
 If we set `age` to `20` in the above example, the first `case`, `age >= 21`,
 returns `false` and the assignment of `canDrink` never happens. The engine then
@@ -146,10 +146,10 @@ true as well.
 
 You now have three different tools available to you to use _selection_ in
 JavaScript: the `if` statement, the `ternary` expression, and the `switch`
-statement. The `if` statement is the one you will use most often — in
-fact, you can _always_ construct your conditional code using some combination of
-`if`, `else if`, and `else`. It may not be the most efficient way to write the
-code, but it will always do the trick.
+statement. The `if` statement is the one you will use most often — in fact, you
+can _always_ construct your conditional code using some combination of `if`,
+`else if`, and `else`. It may not be the most efficient way to write the code,
+but it will always do the trick.
 
 As a rule of thumb, you may find it makes sense to start with `if` statements
 and, once you've got the code working, consider refactoring it to use a ternary
@@ -157,5 +157,5 @@ or switch statement if they're better suited for what you need to do.
 
 ## Resources
 
-* MDN
-  * [`switch` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+- MDN
+  - [`switch` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
